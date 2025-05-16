@@ -12,6 +12,8 @@ LUCI_DEPENDS:=+luci-base +acme
 
 PKG_MAINTAINER:=Toke Høiland-Jørgensen <toke@toke.dk>
 PKG_LICENSE:=GPL-3.0-or-later
+PKG_VERSION:=custom-1.0.0
+PKG_RELEASE:=1
 
 include ../../luci.mk
 
