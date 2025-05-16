@@ -10,7 +10,7 @@ return view.extend({
 			L.resolveDefault(fs.list('/etc/ssl/acme/'), []).then(files => {
 				let certs = [];
 				for (let f of files) {
-					if (f.type == 'file' && f.name.match(/\.key$/)) {
+					if (f.type == 'file' && f.name.match(/^(?!.*(\.chain\.crt|\.combined\.crt|\.fullchain\.crt)$).*\.crt$/)) {
 						certs.push(f);
 					}
 				}
